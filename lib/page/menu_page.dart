@@ -1,4 +1,5 @@
 import 'package:belajar_flutter/page/article_page.dart';
+import 'package:belajar_flutter/page/list_page.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -20,13 +21,23 @@ class _HomeState extends State<Home> {
           child: Column(
             children: [
               ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ArticlePage()));
-                  },
-                  child: const Text(
-                    'Article',
-                  ))
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ArticlePage()));
+                },
+                child: const Text(
+                  'Article',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ListPage()));
+                },
+                child: const Text(
+                  'List Page',
+                ),
+              ),
             ],
           ),
         ),
