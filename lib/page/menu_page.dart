@@ -1,5 +1,6 @@
 import 'package:belajar_flutter/page/article_page.dart';
 import 'package:belajar_flutter/page/list_page.dart';
+import 'package:belajar_flutter/page/list_page_dinamis.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -31,11 +32,24 @@ class _HomeState extends State<Home> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ListPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ListPage()));
                 },
                 child: const Text(
                   'List Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ListPageDinamis()));
+                },
+                child: const Text(
+                  'List Page Dinamis',
                 ),
               ),
             ],
