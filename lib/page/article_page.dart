@@ -17,6 +17,8 @@ class ArticlePage extends StatelessWidget {
   Sejarah Maulid Nabi Muhammad SAW yang diperingati tiap 12 Rabiul Awal penting diketahui Muslim. Tradisi memperingati Maulid Nabi Muhammad SAW sudah dilakukan umat Islam sejak dulu. Tahun ini, Maulid Nabi jatuh pada hari Selasa, tanggal 19 Oktober 2021. Namun, pemerintah menggeser hari libur Maulid Nabi SAW 2021 menjadi Rabu, 20 Oktober 2021 demi mencegah terjadinya klaster Covid-19. Tujuan memeringati Maulid Nabi SAW adalah dalam rangka menampakkan kegembiran atas kelahiran manusia agung pembawa rahmat alam semesta. Allah SWT berfirman:  قُلْ بِفَضْلِ اللّهِ وَبِرَحْمَتِهِ فَبِذَلِكَ فَلْيَفْرَحُواْ هُوَ خَيْرٌ مِّمَّا يَجْمَعُونَ “Katakanlah: “Dengan kurnia Allah dan rahmat-Nya, hendaklah dengan itu mereka bergembira. Kurnia Allah dan rahmat-Nya itu adalah lebih baik dari apa yang mereka kumpulkan. (QS.Yunus:58). Salah satu bentuk mengungkapkan kebahagiaan dan rasa syukur itu yakni dengan banyak membaca sholawat. Secara bahasa, sholawat berasal dari kata sholah yang berarti doa atau seruan kepada Allah SWT.   Berikut awal mula sejarah Maulid Nabi Muhammad SAW 1. Maulid Nabi Digelar Raja Al Mudhaffar Sejarah Maulid Nabi, menurut Imam al-Suyuthi seperti dikutip mui.or.id, tercatat sebagai raja pertama yang memperingati Maulid Nabi SAW atau hari kelahiran Rasulullah SAW dengan perayaan yang meriah luar biasa adalah Raja Al-Mudhaffar Abu Sa`id Kukburi ibn Zainuddin Ali bin Baktakin (l. 549 H. – w.630 H.) Tidak kurang dari 300.000 dinar beliau keluarkan dengan ikhlas untuk bersedekah pada hari peringatan maulid. Intinya menghimpun semangat juang dengan membacakan syi’ir dan karya sastra yang menceritakan kisah kelahiran Rasulullah saw
 ''';
 
+  ArticlePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,23 +98,23 @@ class ArticlePage extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Text(
               imgCoverContent,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Text(
               content,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.normal,
               ),
               textAlign: TextAlign.justify,
