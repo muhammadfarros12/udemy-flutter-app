@@ -1,4 +1,5 @@
 import 'package:belajar_flutter/model/animal.dart';
+import 'package:belajar_flutter/page/detail_page.dart';
 import 'package:flutter/material.dart';
 
 class ListPageModel extends StatelessWidget {
@@ -15,7 +16,14 @@ class ListPageModel extends StatelessWidget {
         itemCount: animal.length,
         itemBuilder: (context, index) {
           Animal hewan = animal[index];
-          return itemAnimal(hewan, index);
+          return GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailPage(hewan: hewan)));
+              },
+              child: itemAnimal(hewan, index));
         },
       ),
     );
