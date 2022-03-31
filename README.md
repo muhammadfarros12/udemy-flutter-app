@@ -7,6 +7,7 @@ dilampirkan untuk materi pembelajaran
 ### 1. commit 1  
 #### Article Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/a537896c5a8bc8d10fbf1f643fc96b96327b39d4)  
 hal-hal yang dipelajari: Floating Action Button, Expanded, Stack, Single Child Scroll View  
+<<<<<<< HEAD
 
 ### 2. commit 2  
 #### List Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/592d77a08a4db78dcff12e7d209e1343763194e3)  
