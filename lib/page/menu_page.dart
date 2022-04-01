@@ -3,6 +3,7 @@ import 'package:belajar_flutter/page/grid_page.dart';
 import 'package:belajar_flutter/page/list_page.dart';
 import 'package:belajar_flutter/page/list_page_dinamis.dart';
 import 'package:belajar_flutter/page/list_page_model.dart';
+import 'package:belajar_flutter/page/responsive_space_page.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -74,6 +75,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Grid Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ResponsiveSpacePage()));
+                },
+                child: const Text(
+                  'Responsive Space Layout',
                 ),
               ),
             ],
