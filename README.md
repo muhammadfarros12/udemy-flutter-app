@@ -24,3 +24,6 @@ hal-hal yang dipelajari: membuat list menggunakan model data dummy(**ListView.bu
 #### List Page model : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/2ce9506d6e37159f6abf6062308869e7d545b676)  
 hal-hal yang dipelajari: membuat detail dari suatu page menggunakan **Navigator.push** 
 
+### 6. commit 6     
+#### List Page model : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/2bc4cc5646a466fd939389b62716a8d556c22974)  
+hal-hal yang dipelajari: membuat grid layout dan menuju ke detail menggunakan animasi hero (bawaan dari flutter material)
