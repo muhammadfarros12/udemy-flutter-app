@@ -27,3 +27,7 @@ hal-hal yang dipelajari: membuat detail dari suatu page menggunakan **Navigator.
 ### 6. commit 6     
 #### Grid Layout & Hero Animation : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/2bc4cc5646a466fd939389b62716a8d556c22974)  
 hal-hal yang dipelajari: membuat grid layout dan menuju ke detail menggunakan animasi hero (bawaan dari flutter material)
+
+### 7. commit 7     
+#### Responsive Space Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/3c8f49094336e25da28d80015aa29ddcd4fcf343)  
+hal-hal yang dipelajari: membuat responsive space yang mana terdapat item yang jika digunakan spacer dan digabungkan dengan SingleChildScrollView dan diganti orientasi layout menjadi portrait akan tetap error, dan bisa diatur menggunakan Layout Builder   
