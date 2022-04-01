@@ -1,4 +1,5 @@
 import 'package:belajar_flutter/page/article_page.dart';
+import 'package:belajar_flutter/page/grid_page.dart';
 import 'package:belajar_flutter/page/list_page.dart';
 import 'package:belajar_flutter/page/list_page_dinamis.dart';
 import 'package:belajar_flutter/page/list_page_model.dart';
@@ -55,11 +56,24 @@ class _HomeState extends State<Home> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ListPageModel()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ListPageModel()));
                 },
                 child: const Text(
                   'List Page Model',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const GridPage()));
+                },
+                child: const Text(
+                  'Grid Page',
                 ),
               ),
             ],

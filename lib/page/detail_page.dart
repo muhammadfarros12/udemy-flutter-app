@@ -15,10 +15,13 @@ class DetailPage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Image.asset(
-            hewan.image,
-            fit: BoxFit.cover,
-            height: 300,
+          Hero(
+            tag: hewan.image + 'from_grid_to_detail',
+            child: Image.asset(
+              hewan.image,
+              fit: BoxFit.cover,
+              height: 300,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(16),

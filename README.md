@@ -20,7 +20,7 @@ hal-hal yang dipelajari: membuat list menggunakan data dummy, penggunaan setStat
 #### List Page model : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/24f5b1e45fcf0b5d860e95f9553fd25ef740bf11)  
 hal-hal yang dipelajari: membuat list menggunakan model data dummy(**ListView.builder**), penggunaan ClipRRect untuk image  
 
-### 4. commit 4     
+### 5. commit 5     
 #### List Page model : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/2ce9506d6e37159f6abf6062308869e7d545b676)  
 hal-hal yang dipelajari: membuat detail dari suatu page menggunakan **Navigator.push** 
 
