@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class AnotherListPage extends StatefulWidget {
@@ -48,6 +49,20 @@ class _AnotherListPageState extends State<AnotherListPage> {
                   );
                 }),
               ),
+            ),
+            SizedBox(
+              height: 200,
+              child: PageView(
+                  scrollDirection: Axis.horizontal,
+                  pageSnapping: true,
+                  children: _category.map((category) {
+                    return Card(
+                      elevation: 3,
+                      margin: const EdgeInsets.all(16),
+                      color: Colors.white,
+                      child: Center(child: Text(category)),
+                    );
+                  }).toList()),
             )
           ],
         ),
