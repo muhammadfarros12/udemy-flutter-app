@@ -1,3 +1,4 @@
+import 'package:belajar_flutter/page/another_list_page.dart';
 import 'package:belajar_flutter/page/article_page.dart';
 import 'package:belajar_flutter/page/grid_page.dart';
 import 'package:belajar_flutter/page/list_page.dart';
@@ -86,6 +87,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Responsive Space Layout',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => AnotherListPage()));
+                },
+                child: const Text(
+                  'Another List Page',
                 ),
               ),
             ],

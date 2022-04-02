@@ -20,6 +20,15 @@ class _AnotherListPageState extends State<AnotherListPage> {
     'thriller'
   ];
 
+  final List<Map> _listStep = [
+    {'title': 'Order', 'content': 'Make your order here'},
+    {'title': 'Payment', 'content': 'Here payment can you use'},
+    {'title': 'Send', 'content': 'Your order on the way'},
+    {'title': 'Arrive', 'content': 'Your Order has arrived'},
+  ];
+
+  int _currentStep = 0;
+
   void deleteChip(int index) {
     _category.removeAt(index);
     setState(() {});
@@ -34,6 +43,7 @@ class _AnotherListPageState extends State<AnotherListPage> {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.all(16),
@@ -63,7 +73,49 @@ class _AnotherListPageState extends State<AnotherListPage> {
                       child: Center(child: Text(category)),
                     );
                   }).toList()),
-            )
+            ),
+            const SizedBox(height: 20),
+            Stepper(
+                physics: const NeverScrollableScrollPhysics(),
+                onStepContinue: () {
+                  if (_currentStep < _listStep.length - 1) {
+                    setState(() => _currentStep += 1);
+                  }
+                },
+                onStepCancel: () {
+                  if (_currentStep > 0) {
+                    setState(() => _currentStep -= 1);
+                  }
+                },
+                onStepTapped: (value) => setState(() => _currentStep = value),
+                currentStep: _currentStep,
+                steps: List.generate(_listStep.length, (index) {
+                  Map itemStep = _listStep[index];
+                  return Step(
+                      title: Text(itemStep['title']),
+                      content: Container(
+                        padding: const EdgeInsets.all(8),
+                        width: double.maxFinite,
+                        height: 50,
+                        color: Colors.amber[100],
+                        child: Text(itemStep['content']),
+                      ),
+                      isActive: _currentStep == index ? true : false);
+                })
+                // _listStep.map((e) {
+                //   return Step(
+                //       title: Text(e['title']),
+                //       content: Container(
+                //         padding: EdgeInsets.all(8),
+                //         width: double.maxFinite,
+                //         height: 50,
+                //         color: Colors.amber[100],
+                //         child: Text(e['content']),
+                //       ),
+                //       isActive: true
+                //       );
+                // }).toList()
+                )
           ],
         ),
       ),
