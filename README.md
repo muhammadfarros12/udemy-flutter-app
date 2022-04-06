@@ -43,4 +43,6 @@ hal hal yang dipelajari: widget yang digunakan untuk langkah - langkah atau alur
 7. Indexed Stack [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/f1b86f4cfd22b2248da0e007b2dc5dda73f84f81)    
 hal-hal yang dipelajari: membuat stack widget yang mana hanya menampilkan satu widget berdasarkan index yang telah kita tentukan. bedanya dengan **Stack Widget** adalah di dalam Stack widget kita menampilkan keseluruhan widget yang ingin kita tumpuk, sedangkan indexed Stack hanya satu widget saja yang ditampilkan dan berdasarkan index yang telah kita atur.  
 
-
+### 9. commit 9     
+#### Reorder list Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/5db62ae407a5e792015dd4d5c832c7238d0b77b4)  
+hal-hal yang dipelajari: membuat reorder list yang berfungsi, kita bisa menggeser item list berubah urutannya.
