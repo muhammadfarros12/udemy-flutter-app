@@ -1,5 +1,6 @@
 # belajar_flutter
 menggunakan SDK flutter 2.10.1  
+link materi: [link](https://www.udemy.com/course/cara-cepat-belajar-flutter/)
 
 ## Log Pengembangan  
 dilampirkan untuk materi pembelajaran  
@@ -46,3 +47,7 @@ hal-hal yang dipelajari: membuat stack widget yang mana hanya menampilkan satu w
 ### 9. commit 9     
 #### Reorder list Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/5db62ae407a5e792015dd4d5c832c7238d0b77b4)  
 hal-hal yang dipelajari: membuat reorder list yang berfungsi, kita bisa menggeser item list berubah urutannya.
+
+### 10. commit 10     
+#### Expanded list Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/104f44cdbf06771ecc967416f70616271091f1e9)  
+hal-hal yang dipelajari: membuat list yang bisa di expand kebawah
