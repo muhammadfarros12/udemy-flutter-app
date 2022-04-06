@@ -31,3 +31,16 @@ hal-hal yang dipelajari: membuat grid layout dan menuju ke detail menggunakan an
 ### 7. commit 7     
 #### Responsive Space Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/3c8f49094336e25da28d80015aa29ddcd4fcf343)  
 hal-hal yang dipelajari: membuat responsive space yang mana terdapat item yang jika digunakan spacer dan digabungkan dengan SingleChildScrollView dan diganti orientasi layout menjadi portrait akan tetap error, dan bisa diatur menggunakan Layout Builder   
+
+### 8. commit 8     
+#### Another List Page
+1. Wrap [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/49ad42d92038ee298933f0f4e192d7aacde1b8ec)  
+hal-hal yang dipelajari: membuat widget yang kita miliki akan memenuhi ke kanan layar layout, dan jika telah penuh akan turun kebawah. contoh penggunaan: chip view   
+3. PageView [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/67f68f0e7f37cb899a6eb4fb49b57b7012959fdb)  
+hal hal yang dipelajari: membuat carousel widget menggunakan bawaan dari flutter  
+5. Stepper [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/509c2074be1cfb601d3801c99a07519defe597e8)  
+hal hal yang dipelajari: widget yang digunakan untuk langkah - langkah atau alur pengiriman misalnya  
+7. Indexed Stack [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/f1b86f4cfd22b2248da0e007b2dc5dda73f84f81)    
+hal-hal yang dipelajari: membuat stack widget yang mana hanya menampilkan satu widget berdasarkan index yang telah kita tentukan. bedanya dengan **Stack Widget** adalah di dalam Stack widget kita menampilkan keseluruhan widget yang ingin kita tumpuk, sedangkan indexed Stack hanya satu widget saja yang ditampilkan dan berdasarkan index yang telah kita atur.  
+
+
