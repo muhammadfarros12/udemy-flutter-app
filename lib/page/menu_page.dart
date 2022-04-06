@@ -1,5 +1,6 @@
 import 'package:belajar_flutter/page/another_list_page.dart';
 import 'package:belajar_flutter/page/article_page.dart';
+import 'package:belajar_flutter/page/expansion_list_page.dart';
 import 'package:belajar_flutter/page/grid_page.dart';
 import 'package:belajar_flutter/page/list_page.dart';
 import 'package:belajar_flutter/page/list_page_dinamis.dart';
@@ -110,6 +111,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Reorder List Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ExpansionListPage()));
+                },
+                child: const Text(
+                  'Expansion List Page',
                 ),
               ),
             ],
