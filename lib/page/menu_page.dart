@@ -1,5 +1,6 @@
 import 'package:belajar_flutter/page/another_list_page.dart';
 import 'package:belajar_flutter/page/article_page.dart';
+import 'package:belajar_flutter/page/data_table_page.dart';
 import 'package:belajar_flutter/page/expansion_list_page.dart';
 import 'package:belajar_flutter/page/grid_page.dart';
 import 'package:belajar_flutter/page/list_page.dart';
@@ -132,6 +133,15 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Table Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => DataTablePage()));
+                },
+                child: const Text(
+                  'Data Table Page',
                 ),
               ),
             ],
