@@ -1,5 +1,6 @@
 import 'package:belajar_flutter/page/another_list_page.dart';
 import 'package:belajar_flutter/page/article_page.dart';
+import 'package:belajar_flutter/page/custom_scroll.dart';
 import 'package:belajar_flutter/page/data_table_page.dart';
 import 'package:belajar_flutter/page/expansion_list_page.dart';
 import 'package:belajar_flutter/page/grid_page.dart';
@@ -137,11 +138,24 @@ class _HomeState extends State<Home> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DataTablePage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DataTablePage()));
                 },
                 child: const Text(
                   'Data Table Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const CustomScrollPage()));
+                },
+                child: const Text(
+                  'Custom Scroll Page',
                 ),
               ),
             ],
