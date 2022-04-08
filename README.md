@@ -51,3 +51,26 @@ hal-hal yang dipelajari: membuat reorder list yang berfungsi, kita bisa menggese
 ### 10. commit 10     
 #### Expanded list Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/104f44cdbf06771ecc967416f70616271091f1e9)  
 hal-hal yang dipelajari: membuat list yang bisa di expand kebawah
+
+### 11. commit 11     
+#### Table Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/8c7b1c9e54bb3eb7d4c24ad161503c0814b7ba05)  
+hal-hal yang dipelajari: membuat table secara static
+
+### 12. commit 12     
+#### Data Table Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/91e6e2ba3d16b879609d14c766f1ee7025b06b1e)  
+hal-hal yang dipelajari: membuat table secara dinamis dengan data - data yang ada
+
+### 13. commit 13     
+#### Custom Scroll : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/293558f59d70d51b368647b944d9e57986b44989)  
+hal-hal yang dipelajari: membuat custom scroll menggunakan widget sliver.
+
+### 14. commit 14     
+#### Drag Scroll : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/c4e25c24287255f500eee133eb66b973e91510ff)  
+hal-hal yang dipelajari: membuat scroll yang dapat di drag ke atas dan ke bawah seperti list yang berada di bawah dan bisa kita tarik untuk memunculkannya.
+
+### 15. commit 15     
+#### Nested Scroll View : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/d5e874ebf0a228aabd7fe3eed362eb5ebb54633c)  
+hal-hal yang dipelajari: membuat nested scroll, digunakan untuk menghandle view scroll yang bertumpuk 
+
+
+
