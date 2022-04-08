@@ -8,6 +8,7 @@ import 'package:belajar_flutter/page/grid_page.dart';
 import 'package:belajar_flutter/page/list_page.dart';
 import 'package:belajar_flutter/page/list_page_dinamis.dart';
 import 'package:belajar_flutter/page/list_page_model.dart';
+import 'package:belajar_flutter/page/nested_scroll_page.dart';
 import 'package:belajar_flutter/page/reorderlist_page.dart';
 import 'package:belajar_flutter/page/responsive_space_page.dart';
 import 'package:belajar_flutter/page/table_page.dart';
@@ -168,6 +169,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Drag Scroll Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const NestedScrollPage()));
+                },
+                child: const Text(
+                  'Nested Scroll Page',
                 ),
               ),
             ],
