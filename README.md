@@ -4,6 +4,9 @@ link materi: [link](https://www.udemy.com/course/cara-cepat-belajar-flutter/)
 
 ## Log Pengembangan  
 dilampirkan untuk materi pembelajaran  
+<!-- 
+### **UI List**
+--------------------------- -->
 
 ### 1. commit 1  
 #### Article Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/a537896c5a8bc8d10fbf1f643fc96b96327b39d4)  
