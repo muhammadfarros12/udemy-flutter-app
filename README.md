@@ -4,9 +4,10 @@ link materi: [link](https://www.udemy.com/course/cara-cepat-belajar-flutter/)
 
 ## Log Pengembangan  
 dilampirkan untuk materi pembelajaran  
-<!-- 
+
 ### **UI List**
---------------------------- -->
+---------------------------
+berikut beberapa list UI yang sering digunakan:  
 
 ### 1. commit 1  
 #### Article Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/a537896c5a8bc8d10fbf1f643fc96b96327b39d4)  
@@ -75,5 +76,14 @@ hal-hal yang dipelajari: membuat scroll yang dapat di drag ke atas dan ke bawah 
 #### Nested Scroll View : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/d5e874ebf0a228aabd7fe3eed362eb5ebb54633c)  
 hal-hal yang dipelajari: membuat nested scroll, digunakan untuk menghandle view scroll yang bertumpuk 
 
+
+### **Menu Navigation**
+---------------------------
+
+berikut untuk menu navigation yang sering digunakan:
+
+### 11. commit 1     
+#### Navigation Drawer : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/2a1bef2b2e6beeb7dd12007393aa40cda0b43c48)  
+hal-hal yang dipelajari: latihan membuat navigation drawer didalam flutter
 
 
