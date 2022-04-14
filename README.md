@@ -82,14 +82,14 @@ hal-hal yang dipelajari: membuat nested scroll, digunakan untuk menghandle view 
 
 berikut untuk menu navigation yang sering digunakan:
 
-### 11. commit 1     
+### 16. commit 1     
 #### Navigation Drawer : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/2a1bef2b2e6beeb7dd12007393aa40cda0b43c48)  
 hal-hal yang dipelajari: latihan membuat navigation drawer didalam flutter  
 
-### 12. commit 2     
+### 17. commit 2     
 #### Tab Bar Page : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/89be2fdf965d4def53bd46e1b0d47350187a7ea8)  
 hal-hal yang dipelajari: latihan membuat Tab Bar didalam flutter dan menggunakan fragment untuk tiap bagian dari tab tersebut.  
 
-### 13. commit 3     
+### 18. commit 3     
 #### Button Nav : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/4427abdfddc2d0b2a63c479f3aab28d880e2c823)  
 hal-hal yang dipelajari: latihan membuat Button Navigation untuk navigasi antar page menggunakan fragment yang juga digunakan di tab bar.  
