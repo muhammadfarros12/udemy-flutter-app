@@ -1,21 +1,22 @@
-import 'package:belajar_flutter/page/another_list_page.dart';
-import 'package:belajar_flutter/page/article_page.dart';
-import 'package:belajar_flutter/page/custom_scroll.dart';
-import 'package:belajar_flutter/page/data_table_page.dart';
-import 'package:belajar_flutter/page/drag_scroll_page.dart';
-import 'package:belajar_flutter/page/expansion_list_page.dart';
-import 'package:belajar_flutter/page/grid_page.dart';
-import 'package:belajar_flutter/page/list_page.dart';
-import 'package:belajar_flutter/page/list_page_dinamis.dart';
-import 'package:belajar_flutter/page/list_page_model.dart';
+import 'package:belajar_flutter/page/interaction/input_page.dart';
 import 'package:belajar_flutter/page/navigation/bottom_nav_page.dart';
 import 'package:belajar_flutter/page/navigation/drawer_page.dart';
 import 'package:belajar_flutter/page/navigation/tabbar_page.dart';
-import 'package:belajar_flutter/page/nested_scroll_page.dart';
-import 'package:belajar_flutter/page/reorderlist_page.dart';
-import 'package:belajar_flutter/page/responsive_space_page.dart';
-import 'package:belajar_flutter/page/table_page.dart';
 import 'package:flutter/material.dart';
+import 'ui_list/another_list_page.dart';
+import 'ui_list/article_page.dart';
+import 'ui_list/custom_scroll.dart';
+import 'ui_list/data_table_page.dart';
+import 'ui_list/drag_scroll_page.dart';
+import 'ui_list/expansion_list_page.dart';
+import 'ui_list/grid_page.dart';
+import 'ui_list/list_page.dart';
+import 'ui_list/list_page_dinamis.dart';
+import 'ui_list/list_page_model.dart';
+import 'ui_list/nested_scroll_page.dart';
+import 'ui_list/reorderlist_page.dart';
+import 'ui_list/responsive_space_page.dart';
+import 'ui_list/table_page.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -216,6 +217,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Bottom Nav Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const InputPage()));
+                },
+                child: const Text(
+                  'Input Page',
                 ),
               ),
             ],

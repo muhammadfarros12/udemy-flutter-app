@@ -1,7 +1,7 @@
 import 'package:belajar_flutter/model/animal.dart';
-import 'package:belajar_flutter/page/detail_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'detail_page.dart';
 
 class GridPage extends StatelessWidget {
   const GridPage({Key? key}) : super(key: key);
