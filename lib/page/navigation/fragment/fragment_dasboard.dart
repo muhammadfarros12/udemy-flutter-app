@@ -5,8 +5,13 @@ class DasboardFragment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Fragment Dashboard'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Dashboard'),
+      ),
+      body: const Center(
+        child: Text('Fragment Dashboard'),
+      ),
     );
   }
 }

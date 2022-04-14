@@ -8,6 +8,7 @@ import 'package:belajar_flutter/page/grid_page.dart';
 import 'package:belajar_flutter/page/list_page.dart';
 import 'package:belajar_flutter/page/list_page_dinamis.dart';
 import 'package:belajar_flutter/page/list_page_model.dart';
+import 'package:belajar_flutter/page/navigation/bottom_nav_page.dart';
 import 'package:belajar_flutter/page/navigation/drawer_page.dart';
 import 'package:belajar_flutter/page/navigation/tabbar_page.dart';
 import 'package:belajar_flutter/page/nested_scroll_page.dart';
@@ -204,6 +205,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Tab Bar Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const BottomNavPage()));
+                },
+                child: const Text(
+                  'Bottom Nav Page',
                 ),
               ),
             ],
