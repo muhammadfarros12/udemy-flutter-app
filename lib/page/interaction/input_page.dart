@@ -32,6 +32,8 @@ class _InputPageState extends State<InputPage> {
 
   bool _darkMode = false;
 
+  double _sliderValue = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,9 +51,26 @@ class _InputPageState extends State<InputPage> {
         const ListTile(title: Text('CheckBox')),
         _checkBox(),
         const ListTile(title: Text('Switch')),
-        _switch()
+        _switch(),
+        const ListTile(title: Text('Slider')),
+        _slider()
       ]),
     );
+  }
+
+  Slider _slider() {
+    return Slider(
+        value: _sliderValue,
+        min: 0,
+        max: 10,
+        label: '$_sliderValue',
+        divisions: 20,
+        onChanged: (value) {
+          setState(() {
+            _sliderValue = value;
+          });
+          print(value);
+        });
   }
 
   ListTile _switch() {
