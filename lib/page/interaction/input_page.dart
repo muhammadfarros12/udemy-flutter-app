@@ -16,6 +16,8 @@ class _InputPageState extends State<InputPage> {
 
   final _formKey = GlobalKey<FormState>();
 
+  String _gender = 'Laki - laki';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,37 +29,82 @@ class _InputPageState extends State<InputPage> {
         const ListTile(title: Text('TextField')),
         _textInput(),
         const ListTile(title: Text('TextFormField')),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              children: [
-                TextFormField(
-                  decoration: const InputDecoration(labelText: 'Username'),
-                  validator: (value) =>
-                      value == '' ? 'Don\'t Empty Field' : null,
-                  controller: _controllerUsername,
-                ),
-                TextFormField(
-                  decoration: const InputDecoration(labelText: 'Password'),
-                  validator: (value) =>
-                      value == '' ? 'Don\'t Empty Field' : null,
-                  controller: _controllerPassword,
-                ),
-                ElevatedButton(
-                    onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        print(_controllerUsername.text);
-                        print(_controllerPassword.text);
-                      }
-                    },
-                    child: const Text('Submit Text Field'))
-              ],
-            ),
-          ),
-        )
+        _textFormField(),
+        const ListTile(title: Text('Radio Button')),
+        _radioButton()
       ]),
+    );
+  }
+
+  Column _radioButton() {
+    return Column(
+        children: [
+          ListTile(
+            onTap: () {
+              setState(() {
+                _gender = 'laki - laki';
+              });
+            },
+            leading: Radio(
+              value: 'laki - laki',
+              groupValue: _gender,
+              onChanged: (value) {
+                setState(() {
+                  _gender = value.toString();
+                });
+              },
+            ),
+            title: const Text('Laki - laki'),
+          ),
+          ListTile(
+            onTap: () {
+              setState(() {
+                _gender = 'Perempuan';
+              });
+            },
+            leading: Radio(
+              value: 'Perempuan',
+              groupValue: _gender,
+              onChanged: (value) {
+                setState(() {
+                  _gender = value.toString();
+                });
+              },
+            ),
+            title: const Text('Perempuan'),
+          ),
+        ],
+      );
+  }
+
+  Padding _textFormField() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(labelText: 'Username'),
+              validator: (value) => value == '' ? 'Don\'t Empty Field' : null,
+              controller: _controllerUsername,
+            ),
+            TextFormField(
+              decoration: const InputDecoration(labelText: 'Password'),
+              validator: (value) => value == '' ? 'Don\'t Empty Field' : null,
+              controller: _controllerPassword,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    print(_controllerUsername.text);
+                    print(_controllerPassword.text);
+                  }
+                },
+                child: const Text('Submit Text Field'))
+          ],
+        ),
+      ),
     );
   }
 
