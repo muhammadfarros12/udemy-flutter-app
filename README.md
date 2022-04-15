@@ -93,3 +93,31 @@ hal-hal yang dipelajari: latihan membuat Tab Bar didalam flutter dan menggunakan
 ### 18. commit 3     
 #### Button Nav : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/4427abdfddc2d0b2a63c479f3aab28d880e2c823)  
 hal-hal yang dipelajari: latihan membuat Button Navigation untuk navigasi antar page menggunakan fragment yang juga digunakan di tab bar.  
+
+
+### **Input**
+---------------------------
+
+### 19. commit 1     
+#### TextField : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/601bbc6aae7d5f2077ef700f65cbfb65fca7b27a)  
+hal-hal yang dipelajari: latihan membuat text field yang hanya digunakan untuk text normal.
+
+### 20. commit 2     
+#### TextForm Field Validation : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/b5c85459b70a9de5a1cdbf0610f33848f68a8b33)  
+hal-hal yang dipelajari: latihan membuat text field yang menggunakan validasi bawaan dari flutter.
+
+### 21. commit 3     
+#### Radio Button : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/0c70b68b2fe635c68d1a5c0db766e48317a39471)  
+hal-hal yang dipelajari: latihan membuat radio button menggunakan data list secara dinamis.
+
+### 22. commit 4     
+#### CheckBox : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/46bc910f5da97755aa6477da38869916c6f44a48)  
+hal-hal yang dipelajari: latihan membuat checkbox yang menggunakan data static (ditulis secara langsung) dan menggunakan data dinamis(dibuat dalam bentuk list).
+
+### 23. commit 5     
+#### Switch : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/6d5a62c3624eaba16fc11db7fbdc142f70501e72)  
+hal-hal yang dipelajari: latihan membuat switch.
+
+### 24. commit 6     
+#### Switch : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/692b4b26b732a3ef7891abec454d9dd8c143d5c2)  
+hal-hal yang dipelajari: latihan membuat Slider dan penjelasan mengenai property dari widget slider.
