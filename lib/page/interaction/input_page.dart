@@ -20,9 +20,17 @@ class _InputPageState extends State<InputPage> {
 
   bool rememberMe = false;
 
-  List<String> _days = ['sunday', 'monday', 'thursday', 'friday', 'saturday'];
+  final List<String> _days = [
+    'sunday',
+    'monday',
+    'thursday',
+    'friday',
+    'saturday'
+  ];
 
-  List<String> _selectedDays = [];
+  final List<String> _selectedDays = [];
+
+  bool _darkMode = false;
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +47,24 @@ class _InputPageState extends State<InputPage> {
         const ListTile(title: Text('Radio Button')),
         _radioButton(),
         const ListTile(title: Text('CheckBox')),
-        _checkBox()
+        _checkBox(),
+        const ListTile(title: Text('Switch')),
+        _switch()
       ]),
+    );
+  }
+
+  ListTile _switch() {
+    return ListTile(
+      title: const Text('Dark Mode'),
+      onTap: () => setState(() {
+        _darkMode = !_darkMode;
+      }),
+      trailing: Switch(
+          value: _darkMode,
+          onChanged: (value) => setState(() {
+                _darkMode = value;
+              })),
     );
   }
 
