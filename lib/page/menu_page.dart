@@ -1,3 +1,4 @@
+import 'package:belajar_flutter/page/interaction/alert_notif_page.dart';
 import 'package:belajar_flutter/page/interaction/input_page.dart';
 import 'package:belajar_flutter/page/navigation/bottom_nav_page.dart';
 import 'package:belajar_flutter/page/navigation/drawer_page.dart';
@@ -228,6 +229,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Input Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AlertNotifPage()));
+                },
+                child: const Text(
+                  'Alert Notification Page',
                 ),
               ),
             ],
