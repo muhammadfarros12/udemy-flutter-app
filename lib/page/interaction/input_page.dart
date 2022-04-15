@@ -18,6 +18,12 @@ class _InputPageState extends State<InputPage> {
 
   String _gender = 'Laki - laki';
 
+  bool rememberMe = false;
+
+  List<String> _days = ['sunday', 'monday', 'thursday', 'friday', 'saturday'];
+
+  List<String> _selectedDays = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,50 +37,89 @@ class _InputPageState extends State<InputPage> {
         const ListTile(title: Text('TextFormField')),
         _textFormField(),
         const ListTile(title: Text('Radio Button')),
-        _radioButton()
+        _radioButton(),
+        const ListTile(title: Text('CheckBox')),
+        _checkBox()
       ]),
+    );
+  }
+
+  Column _checkBox() {
+    return Column(
+      children: [
+        ListTile(
+          onTap: () => setState(() {
+            rememberMe = !rememberMe;
+          }),
+          leading: Checkbox(
+            value: rememberMe,
+            onChanged: (value) => setState(() {
+              rememberMe = value!;
+            }),
+          ),
+          title: const Text('remember me'),
+        ),
+        const SizedBox(height: 16),
+        Column(
+          children: List.generate(_days.length, (index) {
+            String days = _days[index];
+            return CheckboxListTile(
+                title: Text(days),
+                value: _selectedDays.contains(days),
+                onChanged: (value) {
+                  if (value!) {
+                    _selectedDays.add(days);
+                  } else {
+                    _selectedDays.remove(days);
+                  }
+                  setState(() {});
+                  print(_selectedDays);
+                });
+          }),
+        )
+      ],
     );
   }
 
   Column _radioButton() {
     return Column(
-        children: [
-          ListTile(
-            onTap: () {
+      children: [
+        ListTile(
+          onTap: () {
+            setState(() {
+              _gender = 'laki - laki';
+            });
+          },
+          leading: Radio(
+            value: 'laki - laki',
+            groupValue: _gender,
+            onChanged: (value) {
               setState(() {
-                _gender = 'laki - laki';
+                _gender = value.toString();
               });
             },
-            leading: Radio(
-              value: 'laki - laki',
-              groupValue: _gender,
-              onChanged: (value) {
-                setState(() {
-                  _gender = value.toString();
-                });
-              },
-            ),
-            title: const Text('Laki - laki'),
           ),
-          ListTile(
-            onTap: () {
+          title: const Text('Laki - laki'),
+        ),
+        ListTile(
+          onTap: () {
+            setState(() {
+              _gender = 'Perempuan';
+            });
+          },
+          leading: Radio(
+            value: 'Perempuan',
+            groupValue: _gender,
+            onChanged: (value) {
               setState(() {
-                _gender = 'Perempuan';
+                _gender = value.toString();
               });
             },
-            leading: Radio(
-              value: 'Perempuan',
-              groupValue: _gender,
-              onChanged: (value) {
-                setState(() {
-                  _gender = value.toString();
-                });
-              },
-            ),
-            title: const Text('Perempuan'),
           ),
-        ],
-      );
+          title: const Text('Perempuan'),
+        ),
+      ],
+    );
   }
 
   Padding _textFormField() {
