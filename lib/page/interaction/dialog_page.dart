@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DialogPage extends StatefulWidget {
@@ -80,6 +81,34 @@ class _DialogPageState extends State<DialogPage> {
         });
   }
 
+  void openCupertino() {
+    showCupertinoDialog(
+      context: context,
+      builder: (context) {
+        return CupertinoAlertDialog(
+          title: const Text('Delete Item'),
+          content: const Text('Apa kamu yakin akan menghapus ini?'),
+          actions: [
+            CupertinoDialogAction(
+              child: const Text('Ya'),
+              onPressed: () {
+                Navigator.pop(context);
+                print('delete');
+              },
+            ),
+            CupertinoDialogAction(
+              child: const Text('Tidak'),
+              onPressed: () {
+                Navigator.pop(context);
+                print('cancel delete');
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,6 +126,9 @@ class _DialogPageState extends State<DialogPage> {
         ElevatedButton(
             onPressed: () => openAlertDialog(),
             child: const Text('Alert Dialog')),
+        ElevatedButton(
+            onPressed: () => openCupertino(),
+            child: const Text('Cupertino Dialog')),
       ]),
     );
   }
