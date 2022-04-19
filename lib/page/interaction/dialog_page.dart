@@ -42,6 +42,27 @@ class _DialogPageState extends State<DialogPage> {
         });
   }
 
+  void openAlertDialog() {
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) {
+          return AlertDialog(
+            title: const Text('Delete Item'),
+            content: const Text('Apa kamu yakin akan menghapus ini?'),
+            actions: [
+              TextButton(onPressed: () {}, child: const Text('Ya')),
+              TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    print('cancel delete');
+                  },
+                  child: const Text('Tidak')),
+            ],
+          );
+        });
+  }
+
   void openAboutDialog() {
     showDialog(
         context: context,
@@ -73,6 +94,9 @@ class _DialogPageState extends State<DialogPage> {
         ElevatedButton(
             onPressed: () => openAboutDialog(),
             child: const Text('About Dialog')),
+        ElevatedButton(
+            onPressed: () => openAlertDialog(),
+            child: const Text('Alert Dialog')),
       ]),
     );
   }
