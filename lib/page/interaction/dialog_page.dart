@@ -137,6 +137,30 @@ class _DialogPageState extends State<DialogPage> {
         ]);
   }
 
+  void openbottomSheet(BuildContext ctx) {
+    showBottomSheet(
+        context: ctx,
+        builder: (context) {
+          return Container(
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+              color: Colors.greenAccent,
+            ),
+            height: MediaQuery.of(context).size.height * 0.3,
+            width: MediaQuery.of(context).size.width,
+            child: Column(children: [
+              Image.asset(
+                'asset/image/photo.jpg',
+                width: 150,
+                height: 150,
+              ),
+              const Text('Ini adalah bottom sheet')
+            ]),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -159,6 +183,11 @@ class _DialogPageState extends State<DialogPage> {
             child: const Text('Cupertino Dialog')),
         ElevatedButton(
             onPressed: () => openPopUp(), child: const Text('pop up')),
+        Builder(builder: (ctx) {
+          return ElevatedButton(
+              onPressed: () => openbottomSheet(ctx),
+              child: const Text('Bottom Sheet'));
+        }),
       ]),
     );
   }
