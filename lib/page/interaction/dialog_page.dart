@@ -42,6 +42,23 @@ class _DialogPageState extends State<DialogPage> {
         });
   }
 
+  void openAboutDialog() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AboutDialog(
+            applicationIcon: Image.asset(
+              'asset/image/photo.jpg',
+              width: 70,
+              height: 70,
+              fit: BoxFit.cover,
+            ),
+            applicationName: 'Belajar Flutter',
+            applicationVersion: '1.2.1',
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +69,10 @@ class _DialogPageState extends State<DialogPage> {
       body: ListView(padding: const EdgeInsets.all(16), children: [
         ElevatedButton(
             onPressed: () => openSimpleDialog(),
-            child: const Text('simple dialog'))
+            child: const Text('simple dialog')),
+        ElevatedButton(
+            onPressed: () => openAboutDialog(),
+            child: const Text('About Dialog')),
       ]),
     );
   }
