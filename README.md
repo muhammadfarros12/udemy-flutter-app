@@ -5,8 +5,9 @@ link materi: [link](https://www.udemy.com/course/cara-cepat-belajar-flutter/)
 ## Log Pengembangan  
 dilampirkan untuk materi pembelajaran  
 
-### **UI List**
----------------------------
+<details open>
+<summary><b>UI List</b></summary> 
+<hr>
 berikut beberapa list UI yang sering digunakan:  
 
 ### 1. commit 1  
@@ -75,10 +76,11 @@ hal-hal yang dipelajari: membuat scroll yang dapat di drag ke atas dan ke bawah 
 ### 15. commit 15     
 #### Nested Scroll View : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/d5e874ebf0a228aabd7fe3eed362eb5ebb54633c)  
 hal-hal yang dipelajari: membuat nested scroll, digunakan untuk menghandle view scroll yang bertumpuk 
+</details>
 
-
-### **Menu Navigation**
----------------------------
+<details open>
+<summary><b>Menu Navigation</b></summary>
+<hr>
 
 berikut untuk menu navigation yang sering digunakan:
 
@@ -93,10 +95,11 @@ hal-hal yang dipelajari: latihan membuat Tab Bar didalam flutter dan menggunakan
 ### 18. commit 3     
 #### Button Nav : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/4427abdfddc2d0b2a63c479f3aab28d880e2c823)  
 hal-hal yang dipelajari: latihan membuat Button Navigation untuk navigasi antar page menggunakan fragment yang juga digunakan di tab bar.  
+</details>
 
-
-### **Input**
----------------------------
+<details open>
+<summary><b>Input</b></summary>
+<hr>
 
 ### 19. commit 1     
 #### TextField : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/601bbc6aae7d5f2077ef700f65cbfb65fca7b27a)  
@@ -121,3 +124,21 @@ hal-hal yang dipelajari: latihan membuat switch.
 ### 24. commit 6     
 #### Switch : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/692b4b26b732a3ef7891abec454d9dd8c143d5c2)  
 hal-hal yang dipelajari: latihan membuat Slider dan penjelasan mengenai property dari widget slider.
+</details>
+
+<details open>
+<summary><b>Alert</b></summary>
+
+<hr>
+
+### 25. commit 1     
+#### Snackbar : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/a1f9a4bc683e8da66bb25098d8411903c2121d2d)  
+hal-hal yang dipelajari: latihan membuat alert menggunakan Snackbar.
+
+### 26. commit 2     
+#### Snackbar : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/ce6f6ff597f0787b4d87439d1b3f4e9cb4ffba2e)  
+hal-hal yang dipelajari: latihan membuat alert menggunakan Material Banner.
+
+nb:
+untuk toast belum di buatkan untuk commitnya dikarenakan adanya error pada library tersebut, sehingga akan dilampirkan di commit selanjutnya.
+</details>
