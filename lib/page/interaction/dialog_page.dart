@@ -161,6 +161,50 @@ class _DialogPageState extends State<DialogPage> {
         });
   }
 
+  void openModalBottomSheet() {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Column(
+            children: [
+              const SizedBox(
+                height: 8,
+              ),
+              const Divider(
+                thickness: 3,
+                color: Colors.black,
+                indent: 100,
+                endIndent: 100,
+              ),
+              ListTile(
+                title: const Text('Modal Bottom Sheet'),
+                trailing: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(Icons.clear)),
+              ),
+              Expanded(
+                child: ListView.builder(
+                    itemCount: 10,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text('Item $index'),
+                      );
+                    }),
+              ),
+            ],
+          );
+        },
+        isDismissible: false,
+        enableDrag: true,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
+        )));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -188,6 +232,9 @@ class _DialogPageState extends State<DialogPage> {
               onPressed: () => openbottomSheet(ctx),
               child: const Text('Bottom Sheet'));
         }),
+        ElevatedButton(
+            onPressed: () => openModalBottomSheet(),
+            child: const Text('Modal Bottom Sheet')),
       ]),
     );
   }
