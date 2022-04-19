@@ -109,6 +109,34 @@ class _DialogPageState extends State<DialogPage> {
     );
   }
 
+  void openPopUp() {
+    showMenu(
+        context: context,
+        position: const RelativeRect.fromLTRB(16, 300, 16, 200),
+        items: const [
+          PopupMenuItem(
+            child: Text('Menu 1'),
+            value: 'menu 1',
+          ),
+          PopupMenuItem(
+            child: Text('Menu 2'),
+            value: 'menu 2',
+          ),
+          PopupMenuItem(
+            child: Text('Menu 3'),
+            value: 'menu 3',
+          ),
+          PopupMenuItem(
+            child: Text('Menu 4'),
+            value: 'menu 4',
+          ),
+          PopupMenuItem(
+            child: Text('Menu 5'),
+            value: 'menu 5',
+          ),
+        ]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,6 +157,8 @@ class _DialogPageState extends State<DialogPage> {
         ElevatedButton(
             onPressed: () => openCupertino(),
             child: const Text('Cupertino Dialog')),
+        ElevatedButton(
+            onPressed: () => openPopUp(), child: const Text('pop up')),
       ]),
     );
   }
