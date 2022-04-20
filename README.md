@@ -145,7 +145,7 @@ untuk toast belum di buatkan untuk commitnya dikarenakan adanya error pada libra
 
 
 <details open>
-<summary><b>Alert</b></summary>
+<summary><b>dialog</b></summary>
 
 <hr>
 
