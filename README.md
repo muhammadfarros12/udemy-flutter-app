@@ -142,3 +142,40 @@ hal-hal yang dipelajari: latihan membuat alert menggunakan Material Banner.
 nb:
 untuk toast belum di buatkan untuk commitnya dikarenakan adanya error pada library tersebut, sehingga akan dilampirkan di commit selanjutnya.
 </details>
+
+
+<details open>
+<summary><b>Alert</b></summary>
+
+<hr>
+
+### 27. commit 1     
+#### Simple Dialog : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/55d153bbd458a58d56af36bb52403002cad3c0af)  
+hal-hal yang dipelajari: latihan membuat simple dialog.
+
+### 28. commit 2     
+#### About Dialog : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/2f75f08bd0671acd84dfb80e31bc3054a69aa8cc)  
+hal-hal yang dipelajari: latihan membuat dialog yang akan menunjukkan detail licenses dari widget yang digunakan.
+
+### 29. commit 3     
+#### Alert Dialog : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/5de879761c26a5a8dde9bacbba19e33efc245166)  
+hal-hal yang dipelajari: latihan membuat Alert dialog.
+
+### 30. commit 4     
+#### Cupertino Dialog : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/af94a02c03047d9d86fea4e22947161c0d792d03)  
+hal-hal yang dipelajari: latihan membuat Alert dialog menggunakan cupertino yang biasa digunakan oleh IOS.
+
+### 31. commit 5     
+#### Pop Up : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/18724d745846973ccd26cadfd46c0954756c3130)  
+hal-hal yang dipelajari: latihan membuat Pop up menu yang diatur secara manual untuk jaraknya.
+
+### 32. commit 6     
+#### Bottom Sheet : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/8c91848a54409b16d955f5eed5a1aa15971452e5)  
+hal-hal yang dipelajari: latihan membuat Bottom Sheet yang memungkinkan bisa berinteraksi dengan UI utama.
+
+### 33. commit 7     
+#### Modal Bottom Sheet : [link](https://github.com/muhammadfarros12/udemy-flutter-app/tree/c0eea9ca369355bc524a51111f7bc24a8f8a524c)  
+hal-hal yang dipelajari: latihan membuat Bottom Sheet yang secara langsung memblokir interaksi dengan UI utama dan fokus pada bottom sheet tersebut.
+</details>
+
+
