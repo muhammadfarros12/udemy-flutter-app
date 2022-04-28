@@ -1,6 +1,7 @@
 import 'package:belajar_flutter/page/interaction/alert_notif_page.dart';
 import 'package:belajar_flutter/page/interaction/dialog_page.dart';
 import 'package:belajar_flutter/page/interaction/input_page.dart';
+import 'package:belajar_flutter/page/interaction/picker_page.dart';
 import 'package:belajar_flutter/page/navigation/bottom_nav_page.dart';
 import 'package:belajar_flutter/page/navigation/drawer_page.dart';
 import 'package:belajar_flutter/page/navigation/tabbar_page.dart';
@@ -252,6 +253,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Dialog Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PickerPage()));
+                },
+                child: const Text(
+                  'Picker Page',
                 ),
               ),
             ],
