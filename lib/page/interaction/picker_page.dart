@@ -37,6 +37,17 @@ class _PickerPageState extends State<PickerPage> {
     }
   }
 
+  void getTime() async {
+    var result =
+        await showTimePicker(context: context, initialTime: TimeOfDay.now());
+
+    if (result != null) {
+      print('Hours: ${result.hour}');
+      print('Minute: ${result.minute}');
+      print(result.format(context));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +61,8 @@ class _PickerPageState extends State<PickerPage> {
         ElevatedButton(
             onPressed: () => getDateRange(),
             child: const Text('Date Range Picker')),
+        ElevatedButton(
+            onPressed: () => getTime(), child: const Text('Time Picker')),
       ]),
     );
   }
