@@ -1,6 +1,9 @@
 // ignore_for_file: avoid_print
 
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
 class PickerPage extends StatefulWidget {
@@ -11,6 +14,8 @@ class PickerPage extends StatefulWidget {
 }
 
 class _PickerPageState extends State<PickerPage> {
+  Uint8List? _imageData;
+
   void getDate() async {
     DateTime? result = await showDatePicker(
         context: context,
@@ -48,6 +53,18 @@ class _PickerPageState extends State<PickerPage> {
     }
   }
 
+  void getImage(ImageSource source) async {
+    final picker = ImagePicker();
+    XFile? image = await picker.pickImage(source: source);
+    if (image != null) {
+      print(image.name);
+      Uint8List imageBytes = await image.readAsBytes();
+      setState(() {
+        _imageData = imageBytes;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,6 +80,13 @@ class _PickerPageState extends State<PickerPage> {
             child: const Text('Date Range Picker')),
         ElevatedButton(
             onPressed: () => getTime(), child: const Text('Time Picker')),
+        ElevatedButton(
+            onPressed: () => getImage(ImageSource.gallery),
+            child: const Text('Image Picker Gallery')),
+        ElevatedButton(
+            onPressed: () => getImage(ImageSource.camera),
+            child: const Text('Image Picker Camera')),
+        if (_imageData != null) Image.memory(_imageData!),
       ]),
     );
   }

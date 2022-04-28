@@ -2,6 +2,7 @@
     package="com.example.belajar_flutter">
    <application
         android:label="belajar_flutter"
+        android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
