@@ -1,3 +1,4 @@
+import 'package:belajar_flutter/page/interaction/action_page.dart';
 import 'package:belajar_flutter/page/interaction/alert_notif_page.dart';
 import 'package:belajar_flutter/page/interaction/dialog_page.dart';
 import 'package:belajar_flutter/page/interaction/input_page.dart';
@@ -271,7 +272,7 @@ class _HomeState extends State<Home> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const PickerPage()));
+                          builder: (context) => const ActionPage()));
                 },
                 child: const Text(
                   'Action Page',
