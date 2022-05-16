@@ -10,6 +10,8 @@ class ActionPage extends StatefulWidget {
 }
 
 class _ActionPageState extends State<ActionPage> {
+  int boxQuantity = 0;
+
   final List _fruits = [
     'semangka',
     'pisang',
@@ -39,28 +41,103 @@ class _ActionPageState extends State<ActionPage> {
           padding: const EdgeInsets.all(16),
           child: Column(children: [
             customButton(),
-            ListView.builder(
-                itemCount: _fruits.length,
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  return Dismissible(
-                    key: Key(_fruits[index]),
-                    background: Container(
+            const SizedBox(
+              height: 16,
+            ),
+            ListTile(
+              title: const Text('Dismisable'),
+              tileColor: Colors.green[400],
+            ),
+            buildDismissable(),
+            const SizedBox(
+              height: 16,
+            ),
+            ListTile(
+              title: const Text('Draggable'),
+              tileColor: Colors.green[400],
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Draggable<int>(
+                  data: 10,
+                  child: Container(
+                      height: 80,
+                      width: 80,
+                      color: Colors.purple,
+                      alignment: Alignment.center,
+                      child: const Text('Box',
+                          style: TextStyle(color: Colors.white))),
+                  feedback: Container(
+                      height: 80,
+                      width: 80,
+                      decoration: const BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                              blurRadius: 6,
+                              color: Colors.black45,
+                              offset: Offset.zero),
+                        ],
+                        color: Colors.purple,
+                      ),
+                      alignment: Alignment.center,
+                      child: const Text('Box',
+                          style: TextStyle(color: Colors.white, fontSize: 14))),
+                  childWhenDragging: Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.grey,
+                  ),
+                ),
+                DragTarget<int>(
+                  builder: (context, candidateData, rejectedData) {
+                    return Container(
+                      height: 100,
+                      width: 100,
                       color: Colors.amber[300],
-                    ),
-                    onDismissed: (direction) {
-                      setState(() => _fruits.removeAt(index));
-                    },
-                    child: ListTile(
-                      title: Text('${index + 1}. ' + _fruits[index]),
-                    ),
-                  );
-                })
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Data Receive :\n $boxQuantity',
+                        textAlign: TextAlign.center,
+                      ),
+                    );
+                  },
+                  onAccept: (int data) {
+                    setState(() {
+                      boxQuantity += data;
+                    });
+                  },
+                )
+              ],
+            )
           ]),
         ),
       ),
     );
+  }
+
+  ListView buildDismissable() {
+    return ListView.builder(
+        itemCount: _fruits.length,
+        physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        itemBuilder: (context, index) {
+          return Dismissible(
+            key: Key(_fruits[index]),
+            background: Container(
+              color: Colors.amber[300],
+            ),
+            onDismissed: (direction) {
+              setState(() => _fruits.removeAt(index));
+            },
+            child: ListTile(
+              title: Text('${index + 1}. ' + _fruits[index]),
+            ),
+          );
+        });
   }
 
   Material customButton() {
