@@ -266,6 +266,17 @@ class _HomeState extends State<Home> {
                   'Picker Page',
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PickerPage()));
+                },
+                child: const Text(
+                  'Action Page',
+                ),
+              ),
             ],
           ),
         ),
