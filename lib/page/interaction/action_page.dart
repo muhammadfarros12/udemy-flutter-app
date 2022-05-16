@@ -59,63 +59,74 @@ class _ActionPageState extends State<ActionPage> {
             const SizedBox(
               height: 16,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Draggable<int>(
-                  data: 10,
-                  child: Container(
-                      height: 80,
-                      width: 80,
-                      color: Colors.purple,
-                      alignment: Alignment.center,
-                      child: const Text('Box',
-                          style: TextStyle(color: Colors.white))),
-                  feedback: Container(
-                      height: 80,
-                      width: 80,
-                      decoration: const BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                              blurRadius: 6,
-                              color: Colors.black45,
-                              offset: Offset.zero),
-                        ],
-                        color: Colors.purple,
-                      ),
-                      alignment: Alignment.center,
-                      child: const Text('Box',
-                          style: TextStyle(color: Colors.white, fontSize: 14))),
-                  childWhenDragging: Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.grey,
-                  ),
-                ),
-                DragTarget<int>(
-                  builder: (context, candidateData, rejectedData) {
-                    return Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.amber[300],
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Data Receive :\n $boxQuantity',
-                        textAlign: TextAlign.center,
-                      ),
-                    );
-                  },
-                  onAccept: (int data) {
-                    setState(() {
-                      boxQuantity += data;
-                    });
-                  },
-                )
-              ],
-            )
+            buildDraggable(),
+            const SizedBox(
+              height: 16,
+            ),
+            InteractiveViewer(
+                child: Image.asset('asset/image/animal/rubah.jpg')),
+            const SizedBox(
+              height: 16,
+            ),
           ]),
         ),
       ),
+    );
+  }
+
+  Row buildDraggable() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Draggable<int>(
+          data: 10,
+          child: Container(
+              height: 80,
+              width: 80,
+              color: Colors.purple,
+              alignment: Alignment.center,
+              child: const Text('Box', style: TextStyle(color: Colors.white))),
+          feedback: Container(
+              height: 80,
+              width: 80,
+              decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 6,
+                      color: Colors.black45,
+                      offset: Offset.zero),
+                ],
+                color: Colors.purple,
+              ),
+              alignment: Alignment.center,
+              child: const Text('Box',
+                  style: TextStyle(color: Colors.white, fontSize: 14))),
+          childWhenDragging: Container(
+            height: 100,
+            width: 100,
+            color: Colors.grey,
+          ),
+        ),
+        DragTarget<int>(
+          builder: (context, candidateData, rejectedData) {
+            return Container(
+              height: 100,
+              width: 100,
+              color: Colors.amber[300],
+              alignment: Alignment.center,
+              child: Text(
+                'Data Receive :\n $boxQuantity',
+                textAlign: TextAlign.center,
+              ),
+            );
+          },
+          onAccept: (int data) {
+            setState(() {
+              boxQuantity += data;
+            });
+          },
+        )
+      ],
     );
   }
 
