@@ -52,6 +52,22 @@ class StylingPage extends StatelessWidget {
               ),
             ]),
           ),
+        ),
+        ListTile(
+          title: const Text('RotateBox'),
+          tileColor: Colors.grey[200],
+        ),
+        Center(
+          child: RotatedBox(
+            quarterTurns: 2,
+            child: Container(
+              alignment: Alignment.center,
+              color: Colors.amber[300],
+              width: 100,
+              height: 30,
+              child: const Text('Rotate Box'),
+            ),
+          ),
         )
       ]),
     );
