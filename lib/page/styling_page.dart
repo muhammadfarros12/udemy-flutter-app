@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class StylingPage extends StatelessWidget {
@@ -23,6 +25,32 @@ class StylingPage extends StatelessWidget {
               width: 200,
               color: Colors.amber,
             ),
+          ),
+        ),
+        ListTile(
+          title: const Text('BackDropFilter'),
+          tileColor: Colors.grey[200],
+        ),
+        Center(
+          child: SizedBox(
+            height: 200,
+            width: 200,
+            child: Stack(children: [
+              Text('0' * 500),
+              Center(
+                child: ClipRect(
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: 200,
+                      height: 200,
+                      child: const Text('Hello world'),
+                    ),
+                  ),
+                ),
+              ),
+            ]),
           ),
         )
       ]),
