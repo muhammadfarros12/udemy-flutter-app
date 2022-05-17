@@ -68,6 +68,16 @@ class StylingPage extends StatelessWidget {
               child: const Text('Rotate Box'),
             ),
           ),
+        ),
+        ListTile(
+          title: const Text('RotateBox'),
+          tileColor: Colors.grey[200],
+        ),
+        ClipRect(
+          child: Align(
+              alignment: Alignment.topCenter,
+              heightFactor: 0.5,
+              child: Image.asset('asset/image/animal/rubah.jpg')),
         )
       ]),
     );
