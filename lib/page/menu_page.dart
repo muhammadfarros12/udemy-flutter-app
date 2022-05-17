@@ -6,6 +6,7 @@ import 'package:belajar_flutter/page/interaction/picker_page.dart';
 import 'package:belajar_flutter/page/navigation/bottom_nav_page.dart';
 import 'package:belajar_flutter/page/navigation/drawer_page.dart';
 import 'package:belajar_flutter/page/navigation/tabbar_page.dart';
+import 'package:belajar_flutter/page/styling_page.dart';
 import 'package:flutter/material.dart';
 import 'ui_list/another_list_page.dart';
 import 'ui_list/article_page.dart';
@@ -276,6 +277,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Action Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const StylingPage()));
+                },
+                child: const Text(
+                  'Styling Page',
                 ),
               ),
             ],
