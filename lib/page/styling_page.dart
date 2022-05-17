@@ -70,15 +70,29 @@ class StylingPage extends StatelessWidget {
           ),
         ),
         ListTile(
-          title: const Text('RotateBox'),
+          title: const Text('ClipRect'),
           tileColor: Colors.grey[200],
         ),
         ClipRect(
           child: Align(
               alignment: Alignment.topCenter,
-              heightFactor: 0.5,
+              heightFactor: 0.8,
               child: Image.asset('asset/image/animal/rubah.jpg')),
-        )
+        ),
+        ListTile(
+          title: const Text('Clip Oval'),
+          tileColor: Colors.grey[200],
+        ),
+        Center(
+          child: ClipOval(
+            child: Image.asset(
+              'asset/image/animal/rubah.jpg',
+              height: 200,
+              width: 200,
+              fit: BoxFit.fill,
+            ),
+          ),
+        ),
       ]),
     );
   }
