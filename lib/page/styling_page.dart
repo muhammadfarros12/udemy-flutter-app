@@ -93,7 +93,46 @@ class StylingPage extends StatelessWidget {
             ),
           ),
         ),
+        ListTile(
+          title: const Text('Clip Path'),
+          tileColor: Colors.grey[200],
+        ),
+        SizedBox(
+          height: 550,
+          child: ClipPath(
+            clipper: _CustomClipPath(),
+            child: Container(
+              decoration: const BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                Colors.blue,
+                Colors.purple,
+              ])),
+            ),
+          ),
+        )
       ]),
     );
+  }
+}
+
+class _CustomClipPath extends CustomClipper<Path> {
+  @override
+  getClip(Size size) {
+    Path path = Path();
+    double width = size.width;
+    double height = size.height;
+
+    path.lineTo(0, height);
+    path.quadraticBezierTo(0, height - 300, width, 180);
+    path.lineTo(width, 0);
+
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper oldClipper) {
+    return true;
   }
 }
