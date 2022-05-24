@@ -1,3 +1,5 @@
+import 'package:belajar_flutter/db/db_animal.dart';
+
 class Animal {
   String name;
   String image;
@@ -9,6 +11,12 @@ class Animal {
       required this.image,
       required this.move,
       required this.weight});
+
+  factory Animal.fromMap(Map<String, dynamic> map) => Animal(
+      name: map[DbAnimal.COLUMN_NAME],
+      image: map[DbAnimal.COLUMN_IMAGE],
+      move: map[DbAnimal.COLUMN_MOVE],
+      weight: map[DbAnimal.COLUMN_WEIGHT]);
 }
 
 String _assetAnimal = 'asset/image/animal';

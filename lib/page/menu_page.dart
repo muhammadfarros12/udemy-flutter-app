@@ -3,6 +3,7 @@ import 'package:belajar_flutter/page/interaction/alert_notif_page.dart';
 import 'package:belajar_flutter/page/interaction/dialog_page.dart';
 import 'package:belajar_flutter/page/interaction/input_page.dart';
 import 'package:belajar_flutter/page/interaction/picker_page.dart';
+import 'package:belajar_flutter/page/local_db/bookmark_animal_page.dart';
 import 'package:belajar_flutter/page/local_db/pref_page.dart';
 import 'package:belajar_flutter/page/navigation/bottom_nav_page.dart';
 import 'package:belajar_flutter/page/navigation/drawer_page.dart';
@@ -300,6 +301,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Preference Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const BookmarkAnimalPage()));
+                },
+                child: const Text(
+                  'Bookmark Animal Page',
                 ),
               ),
             ],
