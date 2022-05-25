@@ -1,4 +1,5 @@
 import 'package:belajar_flutter/db/db_animal.dart';
+import 'package:belajar_flutter/page/ui_list/detail_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/animal.dart';
@@ -37,7 +38,16 @@ class _BookmarkAnimalPageState extends State<BookmarkAnimalPage> {
               itemBuilder: (context, index) {
                 Animal animal = _listAnimal[index];
                 return ListTile(
+                  onTap: () {
+                    Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    DetailPage(hewan: animal)))
+                        .then((value) => getListAnimal());
+                  },
                   title: Text(animal.name),
+                  trailing: const Icon(Icons.navigate_next),
                 );
               },
               separatorBuilder: (context, index) {

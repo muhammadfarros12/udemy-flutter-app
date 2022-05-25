@@ -17,6 +17,13 @@ class Animal {
       image: map[DbAnimal.COLUMN_IMAGE],
       move: map[DbAnimal.COLUMN_MOVE],
       weight: map[DbAnimal.COLUMN_WEIGHT]);
+
+  Map<String, dynamic> toMap() => {
+        DbAnimal.COLUMN_IMAGE: image,
+        DbAnimal.COLUMN_MOVE: move,
+        DbAnimal.COLUMN_WEIGHT: weight,
+        DbAnimal.COLUMN_NAME: name,
+      };
 }
 
 String _assetAnimal = 'asset/image/animal';

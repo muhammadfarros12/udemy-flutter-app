@@ -21,7 +21,7 @@ class DbAnimal {
     return _database!;
   }
 
-  // method untuk buat database
+  // method untuk buat tabel database
   Future<Database> createDatabase() async {
     String databasePath = await getDatabasesPath();
     return openDatabase(join(databasePath, DATABASE_NAME),
@@ -49,5 +49,33 @@ class DbAnimal {
       listAnimal.add(Animal.fromMap(element));
     }
     return listAnimal;
+  }
+
+  // method check data dari database agar bsa di bookmark
+  Future<bool> checkAnimal(String name) async {
+    final db = await database;
+    var animals = await db.query(TABLE_NAME,
+        columns: [COLUMN_NAME, COLUMN_IMAGE, COLUMN_MOVE, COLUMN_WEIGHT],
+        where: '$COLUMN_NAME = ?',
+        whereArgs: [name]);
+
+    if (animals.isNotEmpty) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // method untuk insert detail ke bookmark
+  Future<int> insertAnimal(Animal animal) async {
+    final db = await database;
+    return await db.insert(TABLE_NAME, animal.toMap());
+  }
+
+  // method untuk delete bookmark
+  Future<int> deleteWhereName(String name) async {
+    final db = await database;
+    return await db
+        .delete(TABLE_NAME, where: '$COLUMN_NAME = ?', whereArgs: [name]);
   }
 }

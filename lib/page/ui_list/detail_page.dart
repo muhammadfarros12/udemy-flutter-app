@@ -1,10 +1,44 @@
+// ignore_for_file: avoid_print
+
+import 'package:belajar_flutter/db/db_animal.dart';
 import 'package:belajar_flutter/model/animal.dart';
 import 'package:flutter/material.dart';
 
-class DetailPage extends StatelessWidget {
+class DetailPage extends StatefulWidget {
   final Animal hewan;
 
   const DetailPage({Key? key, required this.hewan}) : super(key: key);
+
+  @override
+  State<DetailPage> createState() => _DetailPageState();
+}
+
+class _DetailPageState extends State<DetailPage> {
+  bool _isBookmarked = false;
+
+  void checkAnimal() async {
+    print('checkAnimal');
+    _isBookmarked = await DbAnimal().checkAnimal(widget.hewan.name);
+    setState(() {});
+  }
+
+  void addBookmarkAnimal() {
+    print('addBookmarkAnimal');
+    DbAnimal().insertAnimal(widget.hewan);
+    checkAnimal();
+  }
+
+  void deleteBookmarkAnimal() {
+    print('deleteBookmarkAnimal');
+    DbAnimal().deleteWhereName(widget.hewan.name);
+    checkAnimal();
+  }
+
+  @override
+  void initState() {
+    checkAnimal();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +46,27 @@ class DetailPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Detail Page'),
         titleSpacing: 0,
+        actions: [
+          IconButton(
+              onPressed: () {
+                _isBookmarked = !_isBookmarked;
+                if (_isBookmarked) {
+                  addBookmarkAnimal();
+                } else {
+                  deleteBookmarkAnimal();
+                }
+              },
+              icon: Icon(
+                _isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+              )),
+        ],
       ),
       body: ListView(
         children: [
           Hero(
-            tag: hewan.image + 'from_grid_to_detail',
+            tag: widget.hewan.image + 'from_grid_to_detail',
             child: Image.asset(
-              hewan.image,
+              widget.hewan.image,
               fit: BoxFit.cover,
               height: 300,
             ),
@@ -28,17 +76,17 @@ class DetailPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(hewan.name,
+                Text(widget.hewan.name,
                     style: const TextStyle(
                         fontWeight: FontWeight.bold, fontSize: 18)),
                 const SizedBox(
                   height: 8,
                 ),
-                Text(hewan.move),
+                Text(widget.hewan.move),
                 const SizedBox(
                   height: 5,
                 ),
-                Text('${hewan.weight} Kg'),
+                Text('${widget.hewan.weight} Kg'),
               ],
             ),
           ),
@@ -61,8 +109,8 @@ class DetailPage extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(11),
-          boxShadow: [
-            const BoxShadow(
+          boxShadow: const [
+            BoxShadow(
                 offset: Offset(5, 6), blurRadius: 6, color: Colors.black45)
           ]),
       width: 120,
