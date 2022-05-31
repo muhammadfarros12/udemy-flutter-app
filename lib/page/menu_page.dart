@@ -1,3 +1,4 @@
+import 'package:belajar_flutter/page/flutter_networking.dart';
 import 'package:belajar_flutter/page/interaction/action_page.dart';
 import 'package:belajar_flutter/page/interaction/alert_notif_page.dart';
 import 'package:belajar_flutter/page/interaction/dialog_page.dart';
@@ -312,6 +313,17 @@ class _HomeState extends State<Home> {
                 },
                 child: const Text(
                   'Bookmark Animal Page',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FlutterNetworkPage()));
+                },
+                child: const Text(
+                  'Flutter Networking Page',
                 ),
               ),
             ],
