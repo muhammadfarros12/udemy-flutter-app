@@ -5,6 +5,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import '../model/post.dart';
+
 class FlutterNetworkPage extends StatefulWidget {
   const FlutterNetworkPage({Key? key}) : super(key: key);
 
@@ -14,7 +16,7 @@ class FlutterNetworkPage extends StatefulWidget {
 
 class _FlutterNetworkPageState extends State<FlutterNetworkPage> {
   Map? post;
-  List<Map> listPost = [];
+  List<Post> listPost = [];
 
   void getData() async {
     String url = 'https://jsonplaceholder.typicode.com/posts/1';
@@ -39,7 +41,7 @@ class _FlutterNetworkPageState extends State<FlutterNetworkPage> {
         print(response.body);
         List responseBody = jsonDecode(response.body);
         for (var itemPost in responseBody) {
-          listPost.add(itemPost);
+          listPost.add(Post.fromJson(itemPost));
         }
       }
     } catch (e) {
@@ -98,8 +100,10 @@ class _FlutterNetworkPageState extends State<FlutterNetworkPage> {
                 itemCount: listPost.length,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text(listPost[index]["title"]),
-                    subtitle: Text(listPost[index]["body"]),
+                    leading: CircleAvatar(
+                        child: Text(listPost[index].id.toString())),
+                    title: Text(listPost[index].title ?? ''),
+                    subtitle: Text(listPost[index].body ?? ''),
                   );
                 },
               )
