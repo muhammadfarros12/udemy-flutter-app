@@ -39,15 +39,35 @@ class _FlutterNetworkPageState extends State<FlutterNetworkPage> {
       var response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {
         print(response.body);
-        List responseBody = jsonDecode(response.body);
+        var responseBody = jsonDecode(response.body);
         for (var itemPost in responseBody) {
           listPost.add(Post.fromJson(itemPost));
+          print(responseBody);
         }
       }
     } catch (e) {
       print(e);
     }
     setState(() {});
+  }
+
+  void sendPost() async {
+    String url = 'https://jsonplaceholder.typicode.com/posts';
+    try {
+      print('Send request post');
+      var response = await http.post(Uri.parse(url), body: {
+        'title': 'oey',
+        'body': 'bar',
+        'userId': 1.toString(),
+      });
+      print(response.statusCode.toString());
+      print('status ok');
+      print(response.body);
+      Map responseBody = jsonDecode(response.body);
+      print(responseBody.toString());
+    } catch (e) {
+      print(e);
+    }
   }
 
   @override
@@ -68,6 +88,14 @@ class _FlutterNetworkPageState extends State<FlutterNetworkPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            ListTile(
+              title: const Text('Send Post Data'),
+              tileColor: Colors.grey[300],
+            ),
+            ElevatedButton(
+              onPressed: () => sendPost(),
+              child: const Text('Send/Post Data'),
+            ),
             ListTile(
               title: const Text('Fetch Single Data'),
               tileColor: Colors.grey[300],
